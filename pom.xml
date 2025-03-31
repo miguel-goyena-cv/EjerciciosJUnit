@@ -55,7 +55,22 @@
 			<artifactId>log4j-layout-template-json</artifactId>
 			<scope>runtime</scope>
 		</dependency>
-		
+
+		<!-- API de JUnit 5 (para escribir tests) -->
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
+			<version>5.9.2</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- Motor de ejecución de JUnit 5 -->
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-engine</artifactId>
+			<version>5.9.2</version>
+			<scope>test</scope>
+		</dependency>
+
 	</dependencies>
 
 	<build>

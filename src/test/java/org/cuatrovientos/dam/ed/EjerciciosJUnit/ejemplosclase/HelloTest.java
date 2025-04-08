@@ -1,10 +1,11 @@
 /**
  * 
  */
-package org.cuatrovientos.dam.ed.EjerciciosJUnit.ejemplosClase;
+package org.cuatrovientos.dam.ed.EjerciciosJUnit.ejemplosclase;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.cuatrovientos.dam.ed.EjerciciosJUnit.ejemplosclase.Hello;
 import org.junit.jupiter.api.Test;
 
 /**
@@ -13,7 +14,7 @@ import org.junit.jupiter.api.Test;
 class HelloTest {
 
 	/**
-	 * Test method for {@link org.cuatrovientos.dam.ed.EjerciciosJUnit.ejemplosClase.Hello#sayHello()}.
+	 * Test method for {@link org.cuatrovientos.dam.ed.EjerciciosJUnit.ejemplosclase.Hello#sayHello()}.
 	 */
 	@Test
 	void testSayHello() {

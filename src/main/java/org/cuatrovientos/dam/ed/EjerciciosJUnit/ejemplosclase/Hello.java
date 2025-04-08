@@ -1,4 +1,4 @@
-package org.cuatrovientos.dam.ed.EjerciciosJUnit.ejemplosClase;
+package org.cuatrovientos.dam.ed.EjerciciosJUnit.ejemplosclase;
 
 public class Hello {
 	
@@ -7,7 +7,7 @@ public class Hello {
 	 * @return "hello"
 	 */
 	public String sayHello() {
-		return "hola";
+		return "hello";
 	}
 
 

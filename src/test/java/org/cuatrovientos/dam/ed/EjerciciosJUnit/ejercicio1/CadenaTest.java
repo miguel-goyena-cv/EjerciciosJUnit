@@ -145,14 +145,20 @@ public class CadenaTest {
 		int expected = 1;
 		
 		// 3 Actual
-		int actual = cadenaATestear.contarLetra(caracterAContar);
+		int actual = 0;
+		try {
+			actual = cadenaATestear.contarLetra(caracterAContar);
+		} catch (Exception e) {
+			e.printStackTrace();
+			fail("Lanza una excpetion al contar letras "+ e.getMessage());
+		}
 		
 		// 4 Asserts
 		assertEquals(expected, actual, "El numero de letras a no esta bien calculado en la palabra aáAÁeéEÉiíIÍoóOÓuúUÚ");
 	}
 	
 	@Test
-	void testContarLetraQueNoExiste() {
+	void testContarLetraQueNoExiste() throws Exception {
 		// 1 Creo mi cadena
 		Cadena cadenaATestear = new Cadena("aáAÁeéEÉiíIÍoóOÓuúUÚ"); 
 		char caracterAContar = 'b';
@@ -165,6 +171,21 @@ public class CadenaTest {
 		
 		// 4 Asserts
 		assertEquals(expected, actual, "El numero de letras b no esta bien calculado en la palabra aáAÁeéEÉiíIÍoóOÓuúUÚ");
+	}
+	
+	@Test
+	void testContarLetraException() throws Exception {
+		// 1 Creo mi cadena
+		Cadena cadenaATestear = new Cadena("aáAÁeéEÉiíIÍoóOÓuúUÚ"); 
+		
+		// 3 y 4 Asserts Exception
+        Exception exception = assertThrows(Exception.class, () -> {
+        	cadenaATestear.contarLetra(null);
+        });
+
+        // 4 Verifico también que el mensaje es el apropiado
+        assertEquals("Caracter ni puede ser nulo", exception.getMessage());
+		
 	}
 
 }

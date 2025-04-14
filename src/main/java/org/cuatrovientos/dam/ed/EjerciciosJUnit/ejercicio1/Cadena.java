@@ -20,7 +20,7 @@ public class Cadena {
 	private final static String DOBLE_LETRA_ll =  "ll";
 	
 	//Vocales
-	List<Character> lista = new ArrayList<>(Arrays.asList('a', 'á', 'e', 'é', 'i', 'í', 'o', 'ó', 'u', 'ú'));
+	List<Character> listaVocales = new ArrayList<>(Arrays.asList('a', 'á', 'e', 'é', 'i', 'í', 'o', 'ó', 'u', 'ú'));
 
 	public Cadena(String miCadena) {
 		super();
@@ -62,7 +62,7 @@ public class Cadena {
 		
 		// Paso la cadena a minusculas y asi me evito tener que definir caracteres repetidos
 		for (Character letra: miCadena.toLowerCase().toCharArray()) {
-			if (lista.contains(Character.valueOf(letra)))
+			if (listaVocales.contains(Character.valueOf(letra)))
 				numeroVocales++;
 		}
 		
@@ -91,8 +91,12 @@ public class Cadena {
 	 * Tiene que ser caracter exacto
 	 * @param caracter el caracter a buscar
 	 * @return
+	 * @throws Exception 
 	 */
-	public int contarLetra(char caracter) {
+	public int contarLetra(Character caracter) throws Exception {
+		
+		if (caracter == null)
+			throw new Exception("Caracter ni puede ser nulo");
 		
 		int contador = 0;
 		

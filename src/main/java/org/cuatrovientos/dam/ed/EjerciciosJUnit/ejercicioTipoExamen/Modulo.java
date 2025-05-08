@@ -52,7 +52,7 @@ public class Modulo {
 		
 		// Tiene que cunmplirse que están todos los entregables menos 1 y todos los examenes realizados
 		// sino un 0
-        if (listaEntregables.size() < NUMERO_TOTAL_ENTREGABLES - 1 || listaExamenes.size() < NUMERO_TOTAL_EXAMENES) {
+        if (listaEntregables == null || listaEntregables.size() < NUMERO_TOTAL_ENTREGABLES - 1 || listaExamenes.size() < NUMERO_TOTAL_EXAMENES) {
             return 0;
         }
 
